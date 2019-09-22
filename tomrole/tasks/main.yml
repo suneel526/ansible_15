@@ -27,7 +27,7 @@
   notify: restarttomcat
 
 - name: deploy java application
-    url: 
+    url: http://34.238.164.202:8081/artifactory/sit2/1/target/mahaLogin-1.0.war
     dest: /var/lib/tomcat7/webapps/mahaLogin.war
     force_basic_auth: yes
   notify: restarttomcat
