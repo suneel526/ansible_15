@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: creating ubuntu node
+    ec2:
+     key_name: python.pip
+     instance_type: t2.micro
+     image: ami-0de22960f96d12879
+     wait: yes
+     region: us-east-2
+     group: suneel
+     count: 2
+     instance_tags:
+       Name: AMI_images
+     vpc_subnet_id: subnet-b206dcfe
+     assign_public_ip: yes
